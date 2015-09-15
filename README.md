@@ -29,6 +29,7 @@ self.addSubview(view)
 Pin(view: view).width().constrain()
 ```
 
+Notice that 'view.translatesAutoresizingMaskIntoConstraints = false' is not required with Pin.
 All Pin constaints must terminate with a call to the constrain() function. Pin is so simple because it makes assumptions that are true for the majority of layout constraints you
 are likely to set. These are as follows:
 
