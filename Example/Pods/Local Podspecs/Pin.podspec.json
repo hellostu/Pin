@@ -1,0 +1,25 @@
+{
+  "name": "Pin",
+  "version": "0.1.0",
+  "summary": "A short description of Pin.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/Pin",
+  "license": "MIT",
+  "authors": {
+    "Stuart Lynch": "stu@iname.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/Pin.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "Pin": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

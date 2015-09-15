@@ -1,0 +1,14 @@
+PODS:
+  - Pin (0.1.0)
+
+DEPENDENCIES:
+  - Pin (from `../`)
+
+EXTERNAL SOURCES:
+  Pin:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Pin: bd613f64da05c09b6937aa95208e9056c412e6f0
+
+COCOAPODS: 0.39.0.beta.4

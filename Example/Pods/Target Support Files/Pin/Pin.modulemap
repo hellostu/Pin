@@ -1,0 +1,6 @@
+framework module Pin {
+  umbrella header "Pin-umbrella.h"
+
+  export *
+  module * { export * }
+}
