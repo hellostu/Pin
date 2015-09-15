@@ -9,9 +9,9 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-Pin was designed to simplify AutoLayout code. It is designed to read much more easily than using
-just NSLayoutConstraint objects. Here is some typical AutoLayout code which matches says that
-a view's width should match it's parent:
+Pin was designed to simplify AutoLayout code. It is intended to be easier to read than
+NSLayoutConstraint code. Here is some typical AutoLayout code which matches
+a view's width to it's parent's width:
 
 ```Swift
 let view = UIView()
@@ -21,7 +21,7 @@ let constraint = NSLayoutConstraint(item: view, attribute: .Width, relatedBy: .E
 view.addConstraint(constraint)
 ```
 
-The layout code isn't particularly clear for defining just one constraint. Here is the same example with Pin:
+Here is the same example with Pin:
 
 ```Swift
 let view = UIView()
@@ -29,17 +29,17 @@ self.addSubview(view)
 Pin(view: view).width().constrain()
 ```
 
-All Pin constaints must terminate with a call to the constrain() function. This will actually added the constraint.. Pin is so simple because it makes assumptions that are true for the majority of layout constraints you
+All Pin constaints must terminate with a call to the constrain() function. Pin is so simple because it makes assumptions that are true for the majority of layout constraints you
 are likely to set. These are as follows:
 
 1. You are applying the constraint on the view's superview.
-2. The attribute you are setting, you want to match on both views (i.e. in the case of width)
-3. You are assuming that the relations are equal
+2. The attribute you are setting, you want to match on both views (i.e. view's width == superview width)
+3. You are using an equality relation
 4. The multiplier = 1.0 and the constant = 0.0
 
 If these assumptions aren't true, you can still set the additional properties using Pin. 
 
-#Relating to other Views
+#Relating to Other Views
 
 If you want the top of one view to equal the bottom of another view:
 
