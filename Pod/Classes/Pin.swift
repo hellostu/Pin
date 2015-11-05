@@ -21,6 +21,7 @@ public class Pin {
     private var multiplier:CGFloat = 1.0
     private var priority:UILayoutPriority = 1000
     private var relation:NSLayoutRelation = .Equal
+    private var constraint:NSLayoutConstraint?
     
     //////////////////////////////////////////////////////////////////////////
     //MARK: -
@@ -116,11 +117,12 @@ public class Pin {
         return self
     }
     
-    public func constrain() {
+    public func constrain() -> Pin {
         if self.superView == nil {
             self.superView = rootView.superview
         }
         self.constrainOn(self.superView!)
+        return self
     }
     
     public func constrainOn(parent:UIView) {
@@ -137,6 +139,11 @@ public class Pin {
         let constraint = NSLayoutConstraint(item: self.rootView, attribute: rootViewAttribute!, relatedBy: relation, toItem: toView, attribute: toViewAttribute!, multiplier: multiplier, constant: constant)
         constraint.priority = self.priority
         parent.addConstraint(constraint)
+        self.constraint = constraint
+    }
+    
+    public func get() -> NSLayoutConstraint? {
+        return constraint
     }
     
     //////////////////////////////////////////////////////////////////////////
