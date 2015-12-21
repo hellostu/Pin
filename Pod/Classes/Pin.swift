@@ -72,8 +72,20 @@ public class Pin {
         return self
     }
     
+    public func left(left:CGFloat) -> Pin {
+        setAttribute(.Left)
+        self.constant = left
+        return self
+    }
+    
     public func right() -> Pin {
         setAttribute(.Right)
+        return self
+    }
+    
+    public func right(right:CGFloat) -> Pin {
+        setAttribute(.Right)
+        self.constant = right
         return self
     }
     
@@ -82,8 +94,20 @@ public class Pin {
         return self
     }
     
+    public func top(top:CGFloat) -> Pin {
+        setAttribute(.Top)
+        self.constant = top
+        return self
+    }
+    
     public func bottom() -> Pin {
         setAttribute(.Bottom)
+        return self
+    }
+    
+    public func bottom(bottom:CGFloat) -> Pin {
+        setAttribute(.Bottom)
+        self.constant = bottom
         return self
     }
     
@@ -92,8 +116,20 @@ public class Pin {
         return self
     }
     
+    public func centerX(centerX:CGFloat) -> Pin {
+        setAttribute(.CenterX)
+        self.constant = centerX
+        return self
+    }
+    
     public func centerY() -> Pin {
         setAttribute(.CenterY)
+        return self
+    }
+    
+    public func centerY(centerY:CGFloat) -> Pin {
+        setAttribute(.CenterY)
+        self.constant = centerY
         return self
     }
     
