@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         Pin(view: leftView).top(add: 20).constrain()
         Pin(view: leftView).bottom().constrain()
         //Width of 300 hundred ideally, but don't grow bigger than half the screen
-        Pin(view: leftView).width().multiplyBy(0.5).relation(.LessThanOrEqual).constrain()
+        Pin(view: leftView).width(multiplyBy: 0.5).relation(.LessThanOrEqual).constrain()
         Pin(view: leftView).width(300).priority(750).constrain()
         
         let rightTopView = UIView()

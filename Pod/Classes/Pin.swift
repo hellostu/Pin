@@ -97,12 +97,12 @@ public class Pin {
         return self
     }
     
-    public func add(add:CGFloat) -> Pin {
+    internal func add(add:CGFloat) -> Pin {
         self.constant = add
         return self
     }
     
-    public func multiplyBy(multiplier:CGFloat) -> Pin {
+    internal func multiplyBy(multiplier:CGFloat) -> Pin {
         self.multiplier = multiplier
         return self
     }
