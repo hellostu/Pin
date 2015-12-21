@@ -18,10 +18,10 @@ class ViewController: UIViewController {
         leftView.backgroundColor = UIColor.greenColor()
         self.view.addSubview(leftView)
         Pin(view: leftView).left().constrain()
-        Pin(view: leftView).top(20).constrain()
+        Pin(view: leftView).top(add: 20).constrain()
         Pin(view: leftView).bottom().constrain()
         //Width of 300 hundred ideally, but don't grow bigger than half the screen
-        Pin(view: leftView).width().multiplier(0.5).relation(.LessThanOrEqual).constrain()
+        Pin(view: leftView).width().multiplyBy(0.5).relation(.LessThanOrEqual).constrain()
         Pin(view: leftView).width(300).priority(750).constrain()
         
         let rightTopView = UIView()
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         Pin(view: yellowSquare).top().to(topSeperatorView).bottom().constrain()
         Pin(view: yellowSquare).height(50).constrain()
         Pin(view: yellowSquare).width().to(yellowSquare).height().constrain()
-        Pin(view: yellowSquare).left(10).to(topSeperatorView).constrain()
+        Pin(view: yellowSquare).left(add: 10).to(topSeperatorView).constrain()
         
         let middleSeperatorView = UIView()
         self.view.addSubview(middleSeperatorView)
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         purpleSquare.backgroundColor = UIColor.purpleColor()
         self.view.addSubview(purpleSquare)
         Pin(view: purpleSquare).top().to(middleSeperatorView).bottom().constrain()
-        Pin(view: purpleSquare).right(-10).constrain()
+        Pin(view: purpleSquare).right(add: -10).constrain()
         Pin(view: purpleSquare).width().to(yellowSquare).constrain()
         Pin(view: purpleSquare).height().to(yellowSquare).constrain()
         
