@@ -83,7 +83,7 @@ Pin assumes that the constraint relation is NSLayoutRelation.Equal. However if y
 want to set a different relation, you can use the relation(...) function:
 
 ```Swift
-Pin(view: view).width().multiplier(0.5).relation(.LessThanOrEqual).constrain()
+Pin(view: view).width(multiplyBy: 0.5).relation(.LessThanOrEqual).constrain()
 ```
 
 ### Constraint Priority
@@ -92,7 +92,7 @@ Constraint priority is a property on NSLayoutConstraint and cannot be set from
 the init function. This adds additional code lines. It's simple with Pin:
 
 ```Swift
-Pin(view: view).width().multiplier(0.5).relation(.LessThanOrEqual).constrain()
+Pin(view: view).width(multiplyBy: 0.5).relation(.LessThanOrEqual).constrain()
 Pin(view: view).width(200.0).priority(750).constrain()
 ```
 
