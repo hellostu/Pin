@@ -121,11 +121,10 @@ public class Pin {
         if self.superView == nil {
             self.superView = rootView.superview
         }
-        self.constrainOn(self.superView!)
-        return self
+        return self.constrainOn(self.superView!)
     }
     
-    public func constrainOn(parent:UIView) {
+    public func constrainOn(parent:UIView) -> Pin {
         if self.toView == nil {
             self.toView = self.superView
         }
@@ -140,6 +139,7 @@ public class Pin {
         constraint.priority = self.priority
         parent.addConstraint(constraint)
         self.constraint = constraint
+        return self
     }
     
     public func get() -> NSLayoutConstraint? {
