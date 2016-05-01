@@ -45,7 +45,9 @@ public class Pin {
     
     public func height(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Height)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func height(height:CGFloat) -> Pin {
@@ -57,7 +59,9 @@ public class Pin {
     
     public func width(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Width)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func width(width:CGFloat) -> Pin {
@@ -69,56 +73,64 @@ public class Pin {
     
     public func left(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Left)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func right(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Right)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func top(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Top)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func bottom(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Bottom)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func centerX(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.CenterX)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func centerY(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.CenterY)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func baseline(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Baseline)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func leading(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Leading)
-        return multiplyBy(value).add(constant)
+        self.multiplier = value
+        self.constant = constant
+        return self
     }
     
     public func trailing(multiplyBy value:CGFloat = 1.0, add constant:CGFloat = 0.0) -> Pin {
         setAttribute(.Trailing)
-        return multiplyBy(value).add(constant)
-    }
-    
-    internal func add(add:CGFloat) -> Pin {
-        self.constant = add
-        return self
-    }
-    
-    internal func multiplyBy(multiplier:CGFloat) -> Pin {
-        self.multiplier = multiplier
+        self.multiplier = value
+        self.constant = constant
         return self
     }
     
