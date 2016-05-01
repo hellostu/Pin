@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Pin"
-  s.version          = "2.2.1"
+  s.version          = "2.2.2"
   s.summary          = "Pin is a Swift wrapper for AutoLayout"
 
 # This description is used to generate tags and improve search results.
