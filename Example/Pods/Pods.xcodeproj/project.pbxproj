@@ -11,7 +11,6 @@
 		065287B4780A6304D9594473EAD74C17 /* Pin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A61D2BFDCB17E1A16EAD97B659D6F98 /* Pin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		347C047F53EB82A0E260D0A43D407791 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FC114777CEC3C05B0D29D85AB2FEA4 /* Pin.swift */; };
 		3C0687BEEFE38AAE59B6EFBC0B75ABF8 /* Pods-Pin_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3AA3E4B3D4A2196382FD5BD2549C8AB /* Pods-Pin_Tests-dummy.m */; };
-		4417CFC91C281EE700568688 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4417CFC81C281EE700568688 /* Constants.swift */; };
 		4FE6C2316106540FC190BEB7711616C3 /* Pin.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 302C88007D61F62F4E11A3D7B6D81DCB /* Pin.bundle */; };
 		55F731553E13DF673EE09C3DC210CB7A /* Pods-Pin_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 617EA17CB0997BA4F96AB8061F4294D9 /* Pods-Pin_Example-dummy.m */; };
 		56BB704EE11FA58E8B9ABD062771E2AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC034AC5BC4E65361C88B7548CC337F /* Foundation.framework */; };
@@ -57,7 +56,6 @@
 		2B12563A215116FEC6A95DBCBF482BA2 /* Pods-Pin_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Pin_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2ED9FE96C8D2DA4912E2FCB7974A3E60 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		302C88007D61F62F4E11A3D7B6D81DCB /* Pin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		4417CFC81C281EE700568688 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		48C287A5D674E427F464755923CDDFBD /* Pods-Pin_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Pin_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4B1A1F158596A19F7D7E70FAA8F432E8 /* Pods-Pin_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Pin_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		54BFDCB2019AB7AE59659A873CB80C16 /* Pin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pin.modulemap; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				15FC114777CEC3C05B0D29D85AB2FEA4 /* Pin.swift */,
-				4417CFC81C281EE700568688 /* Constants.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -413,7 +410,6 @@
 			files = (
 				CF153269DBBCC98FC54B98E540AE5ACB /* Pin-dummy.m in Sources */,
 				347C047F53EB82A0E260D0A43D407791 /* Pin.swift in Sources */,
-				4417CFC91C281EE700568688 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
