@@ -6,7 +6,7 @@
 //  more readable. It uses the Builder Model to construct a Pin object. Calling the constrain()
 //  method constructs the NSLayoutConstraint and adds the constraints to the parent view.
 //
-//  https://github.com/studomonly/Pin
+//  https://github.com/hellostu/Pin
 
 import UIKit
 
