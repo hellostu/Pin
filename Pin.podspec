@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Pin"
-  s.version          = "2.2.3"
+  s.version          = "2.2.4"
   s.summary          = "Pin is a Swift wrapper for AutoLayout"
 
 # This description is used to generate tags and improve search results.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
   s.homepage         = "https://github.com/hellostu/Pin"
   s.license          = 'MIT'
   s.author           = { "Stuart Lynch" => "stu@iname.com" }
-  s.source           = { :git => "https://github.com/iamstu/Pin.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/hellostu/Pin.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/stuart_lynch'
 
   s.platform     = :ios, '8.0'
