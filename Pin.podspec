@@ -24,6 +24,8 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Stuart Lynch" => "stu@iname.com" }
   s.source           = { :git => "https://github.com/hellostu/Pin.git", :tag => s.version.to_s }
+  s.ios.deployment_target = '8.0'
+  s.tvos.deployment_target = '9.0'
   # s.social_media_url = 'https://twitter.com/stuart_lynch'
 
   s.requires_arc = true
