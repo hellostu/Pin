@@ -15,17 +15,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let leftView = UIView()
-        leftView.backgroundColor = UIColor.greenColor()
+        leftView.backgroundColor = UIColor.green
         self.view.addSubview(leftView)
         Pin(view: leftView).left().constrain()
         Pin(view: leftView).top(add: 20).constrain()
         Pin(view: leftView).bottom().constrain()
         //Width of 300 hundred ideally, but don't grow bigger than half the screen
-        Pin(view: leftView).width(multiplyBy: 0.5).relation(.LessThanOrEqual).constrain()
+        Pin(view: leftView).width(multiplyBy: 0.5).relation(.lessThanOrEqual).constrain()
         Pin(view: leftView).width(300).priority(750).constrain()
         
         let rightTopView = UIView()
-        rightTopView.backgroundColor = UIColor.blueColor()
+        rightTopView.backgroundColor = UIColor.blue
         self.view.addSubview(rightTopView)
         Pin(view: rightTopView).left().to(leftView).right().constrain()
         Pin(view: rightTopView).top().to(leftView).top().constrain()
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         Pin(view: topSeperatorView).right().constrain()
         
         let yellowSquare = UIView()
-        yellowSquare.backgroundColor = UIColor.yellowColor()
+        yellowSquare.backgroundColor = UIColor.yellow
         self.view.addSubview(yellowSquare)
         Pin(view: yellowSquare).top().to(topSeperatorView).bottom().constrain()
         Pin(view: yellowSquare).height(50).constrain()
@@ -54,7 +54,7 @@ class ViewController: UIViewController {
         Pin(view: middleSeperatorView).height().to(topSeperatorView).constrain()
         
         let purpleSquare = UIView()
-        purpleSquare.backgroundColor = UIColor.purpleColor()
+        purpleSquare.backgroundColor = UIColor.purple
         self.view.addSubview(purpleSquare)
         Pin(view: purpleSquare).top().to(middleSeperatorView).bottom().constrain()
         Pin(view: purpleSquare).right(add: -10).constrain()
@@ -71,14 +71,14 @@ class ViewController: UIViewController {
         
         let leftLabel = UILabel()
         leftLabel.text = "Left Box"
-        leftLabel.textColor = UIColor.whiteColor()
+        leftLabel.textColor = UIColor.white
         leftView.addSubview(leftLabel)
         Pin(view: leftLabel).centerX().constrain()
         Pin(view: leftLabel).centerY().constrain()
         
         let rightLabel = UILabel()
         rightLabel.text = "Right Box"
-        rightLabel.textColor = UIColor.whiteColor()
+        rightLabel.textColor = UIColor.white
         rightTopView.addSubview(rightLabel)
         Pin(view: rightLabel).centerX().constrain()
         Pin(view: rightLabel).centerY().constrain()
@@ -99,9 +99,9 @@ class ViewController: UIViewController {
         Pin(view: emptySpaceLabel3).centerY().constrain()
     }
     
-    private func emptySpaceLabel() -> UILabel {
+    fileprivate func emptySpaceLabel() -> UILabel {
         let emptySpaceLabel = UILabel()
-        emptySpaceLabel.textColor = UIColor.blackColor()
+        emptySpaceLabel.textColor = UIColor.black
         emptySpaceLabel.text = "Empty Space"
         return emptySpaceLabel
     }

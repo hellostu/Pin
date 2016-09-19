@@ -10,18 +10,18 @@
 
 import UIKit
 
-public class Pin {
+open class Pin {
     
-    private let rootView:UIView
-    private var toView:UIView?
-    private var superView:UIView?
-    private var rootViewAttribute:NSLayoutAttribute?
-    private var toViewAttribute:NSLayoutAttribute?
-    private var constant:CGFloat = 0.0
-    private var multiplier:CGFloat = 1.0
-    private var priority:UILayoutPriority = 1000
-    private var relation:NSLayoutRelation = .Equal
-    private var constraint:NSLayoutConstraint?
+    fileprivate let rootView:UIView
+    fileprivate var toView:UIView?
+    fileprivate var superView:UIView?
+    fileprivate var rootViewAttribute:NSLayoutAttribute?
+    fileprivate var toViewAttribute:NSLayoutAttribute?
+    fileprivate var constant:CGFloat = 0.0
+    fileprivate var multiplier:CGFloat = 1.0
+    fileprivate var priority:UILayoutPriority = 1000
+    fileprivate var relation:NSLayoutRelation = .equal
+    fileprivate var constraint:NSLayoutConstraint?
     
     //////////////////////////////////////////////////////////////////////////
     //MARK: -
@@ -37,99 +37,99 @@ public class Pin {
     //MARK: Public Methods
     //////////////////////////////////////////////////////////////////////////
     
-    public func to(view:UIView) -> Pin {
+    open func to(_ view:UIView) -> Pin {
         self.toView = view
-        self.relation = .Equal
+        self.relation = .equal
         return self
     }
     
-    public func height() -> Pin {
-        setAttribute(.Height)
+    open func height() -> Pin {
+        setAttribute(.height)
         return self
     }
     
-    public func height(height:CGFloat) -> Pin {
-        setAttribute(.Height)
+    open func height(_ height:CGFloat) -> Pin {
+        setAttribute(.height)
         self.constant = height
         self.multiplier = 0.0
         return self
     }
     
-    public func width() -> Pin {
-        setAttribute(.Width)
+    open func width() -> Pin {
+        setAttribute(.width)
         return self
     }
     
-    public func width(width:CGFloat) -> Pin {
-        setAttribute(.Width)
+    open func width(_ width:CGFloat) -> Pin {
+        setAttribute(.width)
         self.constant = width
         self.multiplier = 0.0
         return self
     }
     
-    public func left() -> Pin {
-        setAttribute(.Left)
+    open func left() -> Pin {
+        setAttribute(.left)
         return self
     }
     
-    public func right() -> Pin {
-        setAttribute(.Right)
+    open func right() -> Pin {
+        setAttribute(.right)
         return self
     }
     
-    public func top() -> Pin {
-        setAttribute(.Top)
+    open func top() -> Pin {
+        setAttribute(.top)
         return self
     }
     
-    public func bottom() -> Pin {
-        setAttribute(.Bottom)
+    open func bottom() -> Pin {
+        setAttribute(.bottom)
         return self
     }
     
-    public func baseline() -> Pin {
-        setAttribute(.Baseline)
+    open func baseline() -> Pin {
+        setAttribute(.lastBaseline)
         return self
     }
     
-    public func centerX() -> Pin {
-        setAttribute(.CenterX)
+    open func centerX() -> Pin {
+        setAttribute(.centerX)
         return self
     }
     
-    public func centerY() -> Pin {
-        setAttribute(.CenterY)
+    open func centerY() -> Pin {
+        setAttribute(.centerY)
         return self
     }
     
-    internal func add(add:CGFloat) -> Pin {
+    internal func add(_ add:CGFloat) -> Pin {
         self.constant = add
         return self
     }
     
-    internal func multiplyBy(multiplier:CGFloat) -> Pin {
+    internal func multiplyBy(_ multiplier:CGFloat) -> Pin {
         self.multiplier = multiplier
         return self
     }
     
-    public func priority(priority:UILayoutPriority) -> Pin {
+    open func priority(_ priority:UILayoutPriority) -> Pin {
         self.priority = priority
         return self
     }
     
-    public func relation(relation:NSLayoutRelation) -> Pin {
+    open func relation(_ relation:NSLayoutRelation) -> Pin {
         self.relation = relation
         return self
     }
     
-    public func constrain() -> Pin {
+    @discardableResult open func constrain() -> Pin {
         if self.superView == nil {
             self.superView = rootView.superview
         }
         return self.constrainOn(self.superView!)
     }
     
-    public func constrainOn(parent:UIView) -> Pin {
+    @discardableResult open func constrainOn(_ parent:UIView) -> Pin {
         if self.toView == nil {
             self.toView = self.superView
         }
@@ -147,7 +147,7 @@ public class Pin {
         return self
     }
     
-    public func get() -> NSLayoutConstraint? {
+    open func get() -> NSLayoutConstraint? {
         return constraint
     }
     
@@ -156,7 +156,7 @@ public class Pin {
     //MARK: Private Methods
     //////////////////////////////////////////////////////////////////////////
     
-    private func setAttribute(attribute:NSLayoutAttribute) {
+    fileprivate func setAttribute(_ attribute:NSLayoutAttribute) {
         if let _ = self.rootViewAttribute {
             self.toViewAttribute = attribute
         } else {
